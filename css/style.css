@@ -259,6 +259,224 @@ header.header-active .navbar a {
     padding: 1rem 2rem;
 }
 
+/* Trainer */
+
+.trainer {
+    min-height: 100vh;
+    text-align: center;
+    background: #333;
+}
+
+.trainer .heading {
+    color: #fff;
+}
+
+.trainer .box-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.trainer .box-container .box {
+    height: 40rem;
+    width: 27rem;
+    margin: 1.5rem 1rem;
+    border: .5rem solid var(--orange);
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 .3rem .5rem #000;
+}
+
+.trainer .box-container .box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.trainer .box-container .box .info {
+    color: #333;
+    background: #fff;
+    border-top: .5rem solid var(--orange);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 2rem;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.trainer .box-container .box .share {
+    position: absolute;
+    top: 1rem;
+    right: -100%;
+    display: flex;
+    flex-flow: column;
+}
+
+.trainer .box-container .box:hover .share {
+    right: 0;
+}
+
+.trainer .box-container .box .share a {
+    height: 4rem;
+    width: 4.5rem;
+    line-height: 4rem;
+    color: #333;
+    font-size: 2rem;
+    background: #fff;
+    margin: .5rem 1rem;
+}
+
+.trainer .box-container .box .share a:hover {
+    background: var(--orange);
+    color: #fff;
+}
+
+/* Plan */
+
+.plan {
+    min-height: 100vh;
+    text-align: center;
+    background: #eee;
+}
+
+.plan .box-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.plan .box-container .box {
+    background: #fff;
+    margin: 2rem;
+    width: 30rem;
+    box-shadow: 0 .3rem .5rem rgba(0,0,0,.3);
+}
+
+.plan .box-container .box .title {
+    font-size: 2.5rem;
+    background: var(--orange);
+    color: #fff;
+    padding: 1rem 0;
+}
+
+.plan .box-container .box .price {
+    font-size: 4rem;
+    color: #333;
+    padding-top: 1rem;
+}
+
+.plan .box-container .box .price span {
+    font-size: 2rem;
+}
+
+.plan .box-container .box .month {
+    font-size: 2rem;
+    color: #666;
+}
+
+.plan .box-container .box ul {
+    margin: 2rem 7rem;
+    list-style: none;
+}
+
+.plan .box-container .box ul li {
+    text-align: left;
+    padding: .5rem 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.plan .box-container .box ul li i {
+    color: #68bd1a;
+    padding: 0 1rem;
+}
+
+.plan .box-container .box ul li i.fa-times {
+    color: #ff6347;
+}
+
+.plan .box-container .box .btn {
+    margin-bottom: 3rem;
+}
+
+.plan .box-container .box:hover {
+    transform: scale(1.05);
+}
+
+
+/* Register */
+
+.register {
+    min-height: 90vh;
+    text-align: center;
+    background: #000;
+    padding-bottom: 3rem;
+}
+
+.register .heading {
+    color: #fff;
+}
+
+.register form {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.register form .inputBox{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.register form .inputBox input, textarea {
+    height: 4rem;
+    width: 49%;
+    background: #111;
+    color: #fff;
+    padding: 0 1rem;
+    margin: 1rem 0;
+    font-size: 2rem;
+    border: none;
+}
+
+.register form .inputBox input:focus, textarea:focus {
+    background: #222;
+}
+
+.register form textarea {
+    height: 20rem;
+    resize: none;
+    padding: 1rm;
+    width: 100%;
+}
+
+.register form .btn:hover {
+    background: var(--orange);
+}
+
+/* Footer */
+
+.footer {
+    color: #fff;
+    background: #111;
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 2rem;
+}
+
+.footer a {
+    color: var(--orange);
+}
+
+.footer a:hover {
+    color: #fff
+}
+
+
+
 /* media queries */
 
 @media (max-width: 768px) {
@@ -301,6 +519,10 @@ header.header-active .navbar a {
         top: 8rem;
         opacity: 1;
     }
+
+    .register form {
+        width: 90%;
+    }
 }
 
 
@@ -311,5 +533,9 @@ header.header-active .navbar a {
 
     .home h1 {
         font-size: 5rem;
+    }
+
+    .register form .inputBox input {
+        width: 100%;
     }
 }
